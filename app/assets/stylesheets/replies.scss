@@ -1,0 +1,11 @@
+
+label.control-label.text.required {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  #reply_reply_body {
+    max-width: 260px
+  }
+
+}

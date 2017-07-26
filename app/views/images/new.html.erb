@@ -1,0 +1,23 @@
+<h2>Upload Image</h2>
+  <%= simple_form_for(@image, html: { multipart: true }) do |f| %>
+    <% if @image.errors.any? %>
+      <% @image.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger"><%=msg %></div>
+      <% end %>
+    <% end %>
+
+    <div class"form-group">
+      <%= f.input :image_title, class:'form-control' %>
+    </div>
+
+    <div class="form-group" >
+      <%= f.input :image_description, class:'form-control' %>
+    </div>
+
+    <div class-"form-group" >
+      <%= f.input :image %>
+    </div>
+
+    <%= f.submit "submit", class:'btn btn-primary' %>
+    <%= link_to "Cancel", "hdd", class:'btn btn-default' %>
+  <% end%>

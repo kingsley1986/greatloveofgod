@@ -1,0 +1,64 @@
+div.commentbody {
+  font-size:15px;
+  margin-bottom:15px;
+  padding-left:30px;
+  padding-right:30px;
+  text-align: center;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.likecomment {
+  color:blue;
+  font-weight:bold;
+  float:left;
+  padding-left:30px;
+}
+
+.unlikecomment {
+  color:blue;
+  font-weight:bold;
+  float:left;
+  padding-left:30px;
+}
+
+.deletecomment {
+}
+
+@media only screen and (max-width: 500px) {
+   a.unlikecomment{
+       margin-left: -8%;
+   }
+}
+@media only screen and (max-width: 500px) {
+   a.viewreply{
+       margin-right: -8%;
+   }
+}
+@media only screen and (max-width: 500px) {
+   a#edit-comment_link{
+       margin-left: 40%;
+   }
+}
+
+#edit-comment_link {
+  float:left;
+  margin-top:-20px;
+  margin-left: 190px;
+}
+
+.viewreply{
+  float:right;
+  padding-right:30px;
+  margin-top:-20px;
+}
+
+.fa.fa-thumbs-o-up {
+  float:left;
+  margin-left:7px;
+}
+
+.links-class {
+  margin-top:20px;
+  background: #DCDCDC;
+}

@@ -1,0 +1,15 @@
+<div class="heading_for_blog">
+  <div class="container"  style="width:30%;">
+    <% @news.each do |news| %>
+      <div class="row item" >
+        <div class="col-md-8"  style="background-color:white; margin-bottom:20px;">
+          <div class="posttitle" style="color:blue; font-size20; font-weight:bold"><%= news.title %></div>
+          <p ><div class="post_body_index" style="text-align: center;  text-align: justify; margin: 0 auto; padding-left:15px; margin-right:15px;"><%= news.body %></div></p>
+          <% news.pictures.each do |pic| %>
+              <div class="postimageclass" style="padding-top:40px;"><%= image_tag(pic.image.url(:medium)) %></div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="header-wrapper-blog">
+  <div class="heading_for_blog">
+    <div class="container"  style="width:50%; background:white;">
+      <%= simple_form_for([@post, @post.comments.build], remote: true, :html => {:multipart => true, id: "newcomment"  } ) do |f| %>
+        <%= f.input :body, as: :text, input_html: { rows: "3", style:"width: 90%; margin:auto"} %>
+        <button type="submit" class="btn btn-success" id="comment-form" name="submit"/>Submit</button>
+      <% end %>
+    </div>
+  </div>
+</div>

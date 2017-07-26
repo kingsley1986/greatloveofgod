@@ -1,0 +1,17 @@
+<div class="heading_for_blog">
+  <div class="container"  style="width:50%;">
+    <% @posts.each do |post| %>
+      <div class="row-item" >
+        <div class="col-md-8" style="background-color:white; margin-bottom:20px;">
+          <div class="posttitle"><%= link_to post.title, post %></div>
+          <p><div class="post_body_index"><%= truncate(post.post_body, length: 280) %></div></p>
+          <% post.pictures.each do |pic, remov| %>
+              <div class="postimageclass"><%= link_to image_tag(pic.image.url(:medium)), post_path(post) if pic.image? %></div>
+              <p style="margin-left:15%;">posted <%= time_ago_in_words(post.created_at) %> ago</p>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+    <%= will_paginate @posts %>
+  </div>
+</div>

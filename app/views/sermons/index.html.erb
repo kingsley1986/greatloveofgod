@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="page-header">
+        <p>List of alle the Sermons</p>
+      </div>
+      <div class="row" >
+        <div class="clear" >
+          <% @sermons.each do |sermon| %>
+            <div class="col-md-6 col-md-offset-3" >
+              <% sermon.pictures.each do |pic, remov| %>
+                <table>
+                  <tr>
+                    <div><td><%=image_tag(pic.image.url(:medium), style:"padding-left:35px; padding-right:100px;") if pic.image?  %></td></div>
+                    <td>
+                      <div ><%= link_to sermon.title, sermon, class:"sermon-title-index"%></div>
+                      <div class="sermon-preacher-index"><%=sermon.preacher %></div>
+                      </br>
+                      <div class="sermon-time-index"> <%=sermon.sermondate.strftime('%d-%b-%Y') unless sermon.sermondate.nil? %></div>
+                    </td>
+                  </tr>
+                </table>
+                <div><%= link_to 'Read more about this sermon', sermon_path(sermon), class:"btn btn-success sermon_link-index", style:"color:white; width:84%; margin-top:-30px; font-family:Georgia, serif; margin-right:60px;" %></div>
+              <% end %>
+            </div>
+          <% end %>
+        <div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-right:420px;"><%= will_paginate @sermons %></div>
+</div>

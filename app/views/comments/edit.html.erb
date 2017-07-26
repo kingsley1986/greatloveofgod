@@ -1,0 +1,7 @@
+<%= simple_form_for([@comment], :html => {:multipart => true, id: "newcomment"  } ) do |f| %>
+  <%= f.input :body, as: :text, input_html: { rows: "3", style:"width: 70%; margin:auto"} %>
+    <%= f.simple_fields_for(:pictures, Picture.new)  do |comment_pic| %>
+      <div style="text-align: center;"><%= comment_pic.input :image %></div>
+    <% end %>
+  <button type="submit" class="btn btn-success" id="submit" name="submit"/>Submit</button>
+<% end %>

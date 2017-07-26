@@ -1,0 +1,11 @@
+<% simple_form_for(@post, html: { multipart: true }) do |f| %>
+  <% if @post.errors.any? %>
+  <%= pluralize(@post.errors.count, "error") %>
+  <% @post.errors.full_messages.each do |msg| %>
+  <%= f.input :title %>
+  <%= f.input :post_body %>
+  <%= f.simple_fields_for :pictures, Picture.new do |ff| %>
+    <%= render 'pictures/pictures', f: ff %>
+    <% end %>
+  <%= f.submit %>
+<% end %>

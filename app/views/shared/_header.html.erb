@@ -1,0 +1,101 @@
+<meta name="viewport" content="width=device-width">
+
+<div class="mobile-display">
+  <h2 class="site-title">
+  	<a href="/">
+  		<img src="/images/rcg.png" alt="smashtheshell" >
+  	</a>
+  </h2>
+</div>
+
+<div class="body-two">
+<nav style="font-size:20px;">
+	<a href="#" class="toggle-menu" style="background:#001f3f">&#9776;</a>
+	<ul class="nav-list nav-open" id="nav">
+		<li><a href="/" style="background: rgba(0, 0, 0, 0.8); border-radius:50%;">Home</a></li>
+		<li><a href="/images" style="background: rgba(0, 0, 0, 0.8); border-radius:50%;">Gallery</a></li>
+		<li class="has-submenu"><a href="/news" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">News</a>
+			<!-- <ul>
+				<li><a href="#">Web Designing</a></li>
+				<li><a href="#">Web Development</a></li>
+				<li><a href="#">UI Designing</a></li>
+				<li><a href="#">Back End Development</a></li>
+				<li><a href="#">Front End Development</a></li>
+			</ul> -->
+		</li>
+		<li class="has-logo"><a href="/">
+			<h2 class="site-title">
+				<img src="/images/rcg.png" alt="smashtheshell">
+			</h2>
+		</a></li>
+		<li class="has-submenu"><a href="#" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">Account</a>
+			<ul style="background:#008080;">
+        <% unless current_user && user_signed_in? %>
+          <li><a href="/sign_up" style="text-decoration: none; font-size:25px;color:white">Sign Up</a></li>
+          <li><a href="/login" style="text-decoration: none; font-size:25px;color:white">Sign In</a></li>
+        <% end %>
+        <% if current_user && user_signed_in? %>
+          <li><a href="/logout" style="text-decoration: none;font-size:25px;color:white">Log Out</a></li>
+          <li><a href="/edit" style="text-decoration: none;font-size:25px;color:white">Edit account</a></li>
+        <% end %>
+			</ul>
+		</li>
+		<li><a href="/posts" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">Blog</a></li>
+		<li><a href="/pages/filter/contact" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">Contact</a></li>
+	</ul>
+</nav>
+</div>
+<% if current_page?(root_path) %>
+  <nav style="  width: 100%;
+    min-height: 50%;
+    text-align: center;">
+    <div class="button middle">
+      <a href="/upcoming_events/live_events" style="display: block;
+        height: 100%;
+        width: 100%;
+        top: 40%;
+        font-weight: bold;
+        color: AliceBlue;
+        position: absolute;
+        border-radius: 50%;
+        text-decoration: none;
+        z-index: 4;">Live Events</a>
+    </div>
+    <div class="button middle">
+      <a href="/upcoming_events/upcomings" style="display: block;
+        height: 100%;
+        width: 100%;
+        top: 40%;
+        font-weight: bold;
+        color: AliceBlue;
+        position: absolute;
+        border-radius: 50%;
+        text-decoration: none;
+        z-index: 4;">future events</a>
+    </div>
+    <div class="button middle">
+      <a href="/upcoming_events/past_events" style="display: block;
+        height: 100%;
+        width: 100%;
+        top: 40%;
+        font-weight: bold;
+        color: AliceBlue;
+        position: absolute;
+        border-radius: 50%;
+        text-decoration: none;
+        z-index: 4;">past Events</a>
+    </div>
+    <div class="button middle">
+      <a href="/upcoming_events" style="display:block;
+        height: 100%;
+        width: 100%;
+        top: 40%;
+        font-weight: bold;
+        color: AliceBlue;
+        position: absolute;
+        border-radius: 50%;
+        text-decoration: none;
+        z-index: 4;">All Events</a>
+    </div>
+  </nav>
+<% end %>

@@ -1,0 +1,59 @@
+<div class="page_wrapper_upcoming_event" style="font-size:15px; margin-bottom:15px; padding-left:30px; padding-right:30px; text-align: center; margin: 0 auto; background: rgba(54, 25, 25, .5)" >
+  <didv class="content" >
+    <% @upcoming_events.each do |upcoming_event| %>
+    <hr class="devidepost">
+      <table style="width: 100%;">
+        <tr>
+          <td>
+            <% if upcoming_event.starting_date.strftime('%Y-%m-%d %H:%M:%S') > DateTime.now.strftime('%Y-%m-%d %H:%M:%S') %>
+            <h2  class="upcoming_title" style="background-color:white; font-weight:bold; text-align: center;"> Future Event </h2>
+            </br>
+              <div class="upcoming_title" style="background-color:white; font-weight:bold; text-align: center;">
+                <%= upcoming_event.title %>
+              </div>
+              </br>
+              <div class="upcomings_body">
+                <%= upcoming_event.body %>
+              </div>
+              </br>
+                <div class="starting_date_class" style="text-align: center;"><%= upcoming_event.starting_date.strftime("Starting on:  %Y-%m-%d %H:%M:%S") %></div>
+              </br>
+                <div class="end_date_class" style="text-align: center;"><%= upcoming_event.end_date.strftime("Ends on:  %Y-%m-%d %H:%M:%S") %></div>
+              </br>
+              <div class="img img1.imgAlbum" >
+                <% upcoming_event.pictures.each do |pic, remov| %>
+                  <%= image_tag(pic.image.url(:medium)) if pic.image? %>
+                <% end %>
+              </div>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <% if upcoming_event.end_date.strftime('%Y-%m-%d %H:%M:%S') < DateTime.now.strftime('%Y-%m-%d %H:%M:%S') %>
+              <h2  class="upcoming_title" style="background-color:white; font-weight:bold; text-align: center;"> Past Event </h2>
+            </br>
+              <div class="upcoming_title" style="background-color:white; font-weight:bold; text-align: center;">
+                <%= upcoming_event.title %>
+              </div>
+            </br>
+              <div class="upcomings_body">
+                <%= upcoming_event.body %>
+              </div>
+              </br>
+                <div class="starting_date_class" style="text-align: center;"><%= upcoming_event.starting_date.strftime("Starting on:  %Y-%m-%d %H:%M:%S") %></div>
+              </br>
+                <div class="end_date_class" style="text-align: center;"><%= upcoming_event.end_date.strftime("Ends on:  %Y-%m-%d %H:%M:%S") %></div>
+              </br>
+              <div class="img img1.imgAlbum" >
+                <% upcoming_event.pictures.each do |pic, remov| %>
+                  <%= image_tag(pic.image.url(:medium)) if pic.image? %>
+                <% end %>
+              </div>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<% if sermonreview.review_approve == ["approved"] %>
+  <hr>
+  <p style="padding-left:10%; padding-right:10%;font-size:18px"><%= sermonreview.body %></p>
+  <div class="pull-left" style="color:green; margin-left:85px;position:relative;bottom:30px"><%= time_ago_in_words(sermonreview.created_at) %> ago</div>
+  <div style="color:green; font-size:17px; position:relative;bottom:30px;"><%= sermonreview.name %></div>
+<% end %>

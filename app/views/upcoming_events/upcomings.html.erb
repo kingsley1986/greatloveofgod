@@ -1,0 +1,46 @@
+<div class="container container-table" style=" text-align: center; margin: 0 auto; background: rgba(54, 25, 25, .5);   margin:auto;width:30%;text-align:center;" >
+  <didv class="content" >
+    <% @upcomings.each do |upcoming_event| %>
+    <hr class="devidepost">
+        <div class="upcoming_title" style="background-color:white; font-weight:bold">
+          <%= upcoming_event.title %>
+        </div>
+      </br>
+        <div class="upcomings_body">
+          <%= upcoming_event.body %>
+        </div>
+      </br>
+        <div class="img img1.imgAlbum" >
+          <% upcoming_event.pictures.each do |pic, remov| %>
+            <%= image_tag(pic.image.url(:medium)) if pic.image? %>
+          <% end %>
+        </div>
+      </br>
+        <div class="starting_date_class"><%= upcoming_event.starting_date.strftime("Starting At:  %Y-%m-%d %H:%M:%S") %></div>
+      </br>
+        <div class="end_date_class"><%= upcoming_event.end_date.strftime("Ends At:  %Y-%m-%d %H:%M:%S") %></div>
+      </br>
+      <div class="" style="color:white; font-size:18px; font-weight:bold">are you coming?</div>
+        <div class="btn btn-primary btn-sm"><%= link_to 'Yes',  goingpeople_upcoming_event_path(upcoming_event), method: :put, remote: true,
+        class:'specific_service',
+        data: {id: upcoming_event.id} %></div>
+
+      <div class="cd-popup" role="alert">
+      	<div class="cd-popup-container">
+      		<p>Do you want to come with a friend?</p>
+      		<ul class="cd-buttons">
+            <li><%= link_to "Yes", coming_with_person_upcoming_event_path(upcoming_event), :method=> :put %></li>
+      			<li><a href="#0">No</a></li>
+      		</ul>
+      	</div> <!-- cd-popup-container -->
+      </div>
+
+      </br>
+      <div  id="questionclass">Click the button below to indicate that you are coming with somone</div>
+        <div class="btn btn-primary btn-sm" id="hiderthisclass" style="display:none"><%= link_to "I am coming with someone",  coming_with_person_upcoming_event_path(upcoming_event), :method=> :put, style:"font-weight:bold; color:white; font-size:20px; text-decoration:none" %></div>
+      </br>
+      <% he = (upcoming_event.going + upcoming_event.coming_with).count %>
+        <div class="countperson" style="background:white; font-size:18px; font-weight:bold;margin-bottom:40px;"><%= pluralize(he, "Person")%> going</div>
+    <% end %>
+  </div>
+</div>

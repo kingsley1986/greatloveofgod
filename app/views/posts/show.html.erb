@@ -1,0 +1,37 @@
+<div class="header-wrapper-blog">
+  <div class="heading_for_blog">
+    <div class="container"  style="width:50%; background:white;">
+      <h2><%= @post.title %></h2>
+      <div class="post-show-body">
+        <%= @post.post_body %>
+      </div>
+      <% @post.pictures.each do |pic, remov| %>
+        <div><%= image_tag(pic.image.url(:medium), class:"post-show-image") if pic.image? %></div>
+        <div>posted <%= time_ago_in_words(@post.created_at) %> ago</div>
+      </br>
+      <% end %>
+      <% if current_user && user_signed_in? %>
+        <% if [@post.liker_id].any? { |l| l&.include?(current_user.id)} %>
+          <%= link_to "Unlike", unlike_post_path(@post, like: true), method: :delete, :remote => true,  :class => 'unlikepost', style:"color: red; margin-right: 20px" %>
+        <%else %>
+          <div><%= link_to "Like", like_post_path(@post, like: true), method: :post, remote: true, :class => 'likepost', style:"color: red; margin-top: 30px;" %></div>
+        <% end %>
+        <%= pluralize( @post.liker_id&.count, "like") %>
+      <% end %>
+      <% if  @post.liker_id&.size >= 1 %>
+        <div class="fa fa-thumbs-o-up" style="margin-left:5px; margin-right:20px;"></div>
+      <% end %>
+    </br>
+    </br>
+      <div class="resetcomments">
+        <%= "#{approved_comments.count} Comments" %>
+      </div>
+      <%= render @post.comments %>
+      </div>
+      <h4 style="text-align:center">Make your Comments: </h4>
+      <% if current_user && user_signed_in? %>
+        <%= render "comments/form" %>
+      <% end %>
+    </div>
+  </div>
+</div>

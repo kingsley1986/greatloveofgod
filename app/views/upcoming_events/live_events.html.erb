@@ -1,0 +1,27 @@
+<div class="container container-table" style=" text-align: center; margin: 0 auto; background: rgba(54, 25, 25, .5);   margin:auto;width:30%;text-align:center;" >
+  <didv class="content" >
+    <% if @lives&.any? %>
+      <% @lives.each do |live| %>
+      <hr class="devidepost">
+          <div class="upcoming_title" style="background-color:white; font-weight:bold">
+            <%= live.title %>
+          </div>
+          <div class="upcomings_body">
+            <%= live.body %>
+          </div>
+        </br>
+          <div class="starting_date_class"><%= live.starting_date.strftime("Started At:  %Y-%m-%d %H:%M:%S") %></div>
+        </br>
+          <div class="end_date_class"><%= live.end_date.strftime("Ends At:  %Y-%m-%d %H:%M:%S") %></div>
+        </br>
+          <div class="img img1.imgAlbum" >
+            <% live.pictures.each do |pic, remov| %>
+              <%= image_tag(pic.image.url(:medium)) if pic.image? %>
+            <% end %>
+          </div>
+      <% end %>
+    <% else %>
+      <h3 style="background:white">No Live Event Now, Please Check out upcoming events </h3>
+    <% end %>
+  </div>
+</div>
