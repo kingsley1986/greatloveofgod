@@ -185,11 +185,13 @@ $color-snow: #fff;
 
  body{
    text-align: center;
-   background: url("https://greatloveofgod.herokuapp.com/images/greatdoveback.jpg") no-repeat center center fixed;
+   background: url("/images/greatdoveback.jpg") no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
+-webkit-backface-visibility: hidden;
+-webkit-transform: translateZ(0); 
  }
 
  @media (max-width: 767px) {
