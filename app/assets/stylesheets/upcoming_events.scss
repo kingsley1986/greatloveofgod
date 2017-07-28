@@ -281,17 +281,6 @@ a#hiderthisclass {
  //   height: 150px;
  // }
  @media only screen and (max-width: 500px) {
-     body {
-       text-align: center;
-       background: url("/images/greatdoveback.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-     }
- }
-
- @media only screen and (max-width: 500px) {
      div.button {
        margin: 2%;
        position: relative;
