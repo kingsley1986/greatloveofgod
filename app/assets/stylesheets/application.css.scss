@@ -107,8 +107,8 @@ $color-snow: #fff;
         display: inline-block;
         border-radius: 50%;
         overflow: hidden;
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
         margin: 0 20px 20px 20px;
         text-align: center;
         background: $color-snow;
@@ -185,7 +185,11 @@ $color-snow: #fff;
 
  body{
    text-align: center;
-   background: 	#FF1493     /* Generic*/
+   background: url("http://3.bp.blogspot.com/-9b8ofyHhpdc/T-CgbeojXrI/AAAAAAAAILQ/SB_z-ok1uSQ/s1600/real_dove_from_heaven_light_dove_holy_ghost.jpg") no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
  }
 
  @media (max-width: 767px) {

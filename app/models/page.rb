@@ -19,8 +19,6 @@ class Page < ActiveRecord::Base
                  'About_Parish_pastor',
                  'About',
                  'Fridaynightvigil',
-                 'Lunchhourprayer',
-                 'Generalnightvigil'
                ]
 
 
@@ -39,7 +37,5 @@ scope :about, -> { where(page_type: 'About') }
 scope :about_redeedemed, -> { where(page_type: 'About_Redeedemed') }
 scope :about_parish_pastor, -> { where(page_type: 'About_Parish_pastor') }
 scope :fridaynightvigil, -> { where(page_type: 'Fridaynightvigil') }
-scope :lunchhourprayer, -> { where(page_type: 'Lunchhourprayer') }
-scope :generalnightvigil, -> { where(page_type: 'Generalnightvigil') }
 
 end
