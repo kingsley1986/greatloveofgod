@@ -184,8 +184,12 @@ $color-snow: #fff;
 }
 
  body{
-      background: url("/images/greatdoveback.jpg") no-repeat center center fixed;
-      background-size: cover;
+   text-align: center;
+   background: url("/images/greatdoveback.jpg");
+   background-size:cover;
+ background-repeat:no-repeat;
+ background-attachment:fixed;
+ height:100%;
  }
 
  @media (max-width: 767px) {
