@@ -38,7 +38,7 @@ section>p{
 	max-width: 130px;
 	display: inline-block;
 	vertical-align: middle;
-  border-radius: 50%;
+  // border-radius: 50%;
   margin-top:-39px;
   margin-bottom: -47px;
 }
@@ -49,8 +49,8 @@ section>p{
 	justify-content: space-between;
 	align-items: center;
 	white-space: nowrap;
-  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL2PUlaVDvpzmaojhyp5zzi6zUi8Na0bSqo67K34SMOl6mfmZ-") repeat;      /* Generic*/
-
+  background: url("http://media1.s-nbcnews.com/j/msnbc/Components/Photos/050717/050717_megachurch_hmed2p.grid-6x2.jpg") repeat;      /* Generic*/
+// https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8_LGf-loKOnI-gYwDIyDEPx_AolI9AXEIGHDIlPHgRv6QIvVPsQ
 }
 .nav-list > li {
 	position: relative;
