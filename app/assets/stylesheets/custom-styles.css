@@ -247,13 +247,13 @@ ul{margin: 0 !important;}
 						padding: 8px; text-transform: uppercase;font-family: 'fjalla_oneregular';}
 	.btn:hover{background: #f9b701; color: #2d6e84; transition:all 1s;}
 
-	.featured-blocks{padding: 60px 0; background: #1e73be; text-align: center;}
+	.featured-blocks{padding: 60px 0; background: #FF1493; text-align: center;}
 	.featured-blocks .block{background: #bcbcbc; border-radius: 5px; padding-left: 20px; padding-right:20px; padding-top: 0;}
 	.featured-blocks .block [class^="fw-icon-"]{}
 	.featured-blocks .block h1{padding-top: 10px; font-size: 24px; color: #2d6e84; font-family: 'fjalla_oneregular'; text-transform: uppercase; padding-bottom: 10px;}
 	.featured-blocks .block p{color: #44535a; font-size: 16px; line-height: 24px; font-family: 'source_sans_proregular';}
 
-	.featured-heading{background: #2d6e84; padding-top: 60px; text-align: center; padding-bottom: 50px; border-bottom: 5px solid #2d6e84;}
+	.featured-heading{background: #FF1493; padding-top: 60px; text-align: center; padding-bottom: 50px; border-bottom: 5px solid #2d6e84;}
 	.featured-heading h1{font-size: 44px; color: #2d6e84; text-transform: uppercase;}
 	.featured-heading h2{font-size: 34px; color: #2d6e84; font-family: 'source_sans_prolight'; text-align: center;}
 	.featured-heading .block{text-align: left;}
@@ -439,5 +439,5 @@ ul{margin: 0 !important;}
      .row {
        margin-left: -35px;
      }
-  
+
    }
