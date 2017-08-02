@@ -1,10 +1,8 @@
-<%= simple_form_for([@sermon, @sermon.sermonreviews.build]) do |f| %>
+<%= simple_form_for([@sermon, @sermon.sermonreviews.build], :html=>{:id=>"sermonreviewid",:multipart => true,:remote=>true}) do |f| %>
   <div class="sermoncomment_body"><%= f.input :body, placeholder: "Please type your comment here", as: :text, input_html: { rows: "6", style:"margin:auto"}%></div>
   <%= f.input :name, placeholder: "please enter your name here" %>
   <%= f.input :email, placeholder: "please enter your email here, your email will not be published" %>
-  <div class="capcha-class">
-    <%= recaptcha_tags %>
-  </div>
+
   <button type="submit" class="btn btn-success" id="submit" name="submit"/>Submit</button>
 
 <% end %>

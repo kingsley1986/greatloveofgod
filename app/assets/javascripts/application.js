@@ -19,22 +19,6 @@ $(document).ready(function(){
   })
 })
 
-
-$(function(){
-  $("#newcomment").on("submit", function(event){
-    $.ajax({
-      type: "POST",
-      url: this.action,
-      data: $(this).serialize(),
-      success: function(response) {
-        //update the DOM
-      }
-    });
-    $("#newcomment").trigger('reset');
-    event.preventDefault();
-  });
-})
-
 $(function(){
   $(".tab_cont").on("submit", function(event){
     $.ajax({
@@ -43,10 +27,10 @@ $(function(){
       data: $(this).serialize(),
       success: function(response) {
         //update the DOM
-        $(".tab_cont").trigger('reset');
       }
     });
     event.preventDefault();
+    $(".tab_cont").trigger('reset');
   });
 })
 
