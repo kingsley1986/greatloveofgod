@@ -13,6 +13,7 @@ skip_before_action :verify_authenticity_token
       flash.now[:error] = nil
       respond_to do |format|
         format.js
+
       end
     else
       flash.now[:error] = "Cannot send message"

@@ -247,9 +247,13 @@
                             <%= f.input :message, :placeholder => "Please type your Prayer request here", as: :text, input_html: { rows: "8" }, class:"form-control input-normal"%><br>
                           </div>
                         </div>
+                        <div class="capcha-class">
+                          <%= recaptcha_tags %>
+                        </div>
                         <div class="row">
                           <button type="submit" class="btn btn-success" id="submit_contact" style="position:relative; left:20px; color:#0f6f2f @import" name="submit"/>Send Your Prayer</button>
                         </div>
+                        <span class="message-class">
                       </div>
                     <% end %>
                   </div>
