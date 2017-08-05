@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 
   def index
     case params[:scope]
-    when 'orphanage', 'youth', 'women', 'food', 'prison', 'hospital', 'sunday', 'tuesday', 'thursday', 'contact', 'home', 'greatloveofgod', 'about_go', 'about', 'fridaynightvigil', 'branches'
+    when 'orphanage', 'youth', 'women', 'food', 'prison', 'hospital', 'sunday', 'tuesday', 'thursday', 'contact', 'home', 'greatloveofgod', 'aboutgo', 'about', 'fridaynightvigil', 'branches'
       @pages = Page.send(params[:scope])
     end
 
