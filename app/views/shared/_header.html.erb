@@ -13,22 +13,20 @@
 	<a href="#" class="toggle-menu" style="background:#001f3f">&#9776;</a>
 	<ul class="nav-list nav-open" id="nav">
 		<li><a href="/" style="background: rgba(0, 0, 0, 0.8); border-radius:50%;">Home</a></li>
-		<li><a href="/images" style="background: rgba(0, 0, 0, 0.8); border-radius:50%;">Gallery</a></li>
-		<li class="has-submenu"><a href="/news" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">News</a>
-			<!-- <ul>
-				<li><a href="#">Web Designing</a></li>
-				<li><a href="#">Web Development</a></li>
-				<li><a href="#">UI Designing</a></li>
-				<li><a href="#">Back End Development</a></li>
-				<li><a href="#">Front End Development</a></li>
-			</ul> -->
+		<li><a href="/images">Gallery</a></li>
+		<li class="has-submenu"><a href="#">about</a>
+			<ul>
+				<li><a href="/new">Tesimonies</a></li>
+				<li><a href="/pages/filter/About_Go">Founder</a></li>
+				<li><a href="/pages/filter/About_Greatlove">greatloveofgod</a></li>
+			</ul>
 		</li>
 		<li class="has-logo"><a href="/">
 			<h2 class="site-title">
 				<img src="/images/greatlove.jpg" alt="smashtheshell">
 			</h2>
 		</a></li>
-		<li class="has-submenu"><a href="#" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">Account</a>
+		<li class="has-submenu"><a href="#">Account</a>
 			<ul style="background:#008080;">
         <% unless current_user && user_signed_in? %>
           <li><a href="/sign_up" style="text-decoration: none; font-size:25px;color:white">Sign Up</a></li>
@@ -40,8 +38,8 @@
         <% end %>
 			</ul>
 		</li>
-		<li><a href="/posts" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">Blog</a></li>
-		<li><a href="/pages/filter/contact" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">Contact</a></li>
+		<li><a href="/posts">Blog</a></li>
+		<li><a href="/pages/filter/contact">Contact</a></li>
 	</ul>
 </nav>
 </div>

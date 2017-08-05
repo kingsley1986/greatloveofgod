@@ -3,9 +3,9 @@ class Page < ActiveRecord::Base
   accepts_nested_attributes_for :pictures, :reject_if => proc { |attributes| attributes['image'].blank? }
 
 
-  PAGE_TYPE = [  'Childrens',
+  PAGE_TYPE = [  'Orphanage',
                  'Youths',
-                 'Elders',
+                 'Women',
                  'Food',
                  'Prison',
                  'Hospital',
@@ -14,17 +14,16 @@ class Page < ActiveRecord::Base
                  'Thursday',
                  'Home Page',
                  'Contact',
-                 'About_Redeedemed',
+                 'About_Greatlove',
                  'About_Go',
-                 'About_Parish_pastor',
                  'About',
                  'Fridaynightvigil',
                ]
 
 
-scope :children, -> { where(page_type: 'Childrens')  }
+scope :orphanage, -> { where(page_type: 'orphanage')  }
 scope :youth, -> { where(page_type: 'Youths') }
-scope :elder, -> { where(page_type:  'Elders')  }
+scope :women, -> { where(page_type:  'Women')  }
 scope :food, -> { where(page_type: 'Food') }
 scope :prison, -> { where(page_type: 'Prisonns') }
 scope :hospital, -> { where(page_type: 'Hospital') }
@@ -34,8 +33,8 @@ scope :thursday, -> { where(page_type:  'Thursday')  }
 scope :home, -> { where(page_type:  'Home Page')  }
 scope :contact, -> { where(page_type: 'Contact') }
 scope :about, -> { where(page_type: 'About') }
-scope :about_redeedemed, -> { where(page_type: 'About_Redeedemed') }
-scope :about_parish_pastor, -> { where(page_type: 'About_Parish_pastor') }
+scope :greatloveofgod, -> { where(page_type: 'About_Greatlove') }
 scope :fridaynightvigil, -> { where(page_type: 'Fridaynightvigil') }
+scope :about_go, -> { where(page_type: 'About_Go') }
 
 end

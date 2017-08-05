@@ -1,5 +1,4 @@
 <div class="wrapper">
-  <div id="reve" >
   <% @sermon.pictures.each do |pic, remov| %>
     <%= image_tag(pic.image.url(:square), class:"post-img") if pic.image? %>
   <% end %>
@@ -18,5 +17,4 @@
       <%= render "sermonreviews/form"%>
     </div>
   </div>
-</div>
 </div>
