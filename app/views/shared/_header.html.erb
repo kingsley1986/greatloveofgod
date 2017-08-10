@@ -7,22 +7,14 @@
   	</a>
   </h2>
 </div>
+
 <div class="body-two">
 <nav style="font-size:20px;">
-	<a href="#" class="toggle-menu" style="background:#001f3f">&#9776;</a>
 	<ul class="nav-list nav-open" id="nav">
-		<li><a href="/" style="background: rgba(0, 0, 0, 0.8); border-radius:50%;">Home</a></li>
-		<li><a href="/images">Gallery</a></li>
-		<li class="has-submenu"><a href="#">about</a>
-			<ul>
-				<li><a href="/news">Tesimonies</a></li>
-				<li><a href="/pages/filter/aboutgo">Founder</a></li>
-				<li><a href="/pages/filter/greatloveofgod">greatloveofgod</a></li>
-			</ul>
 		</li>
 		<li class="has-logo"><a href="/">
 			<h2 class="site-title">
-				<img src="/images/greatlove.jpg" alt="smashtheshell">
+				<img src="/images/greatlove.jpg" alt="smashtheshell" style="margin-left:20px; margin-top:-15px; width:50%;">
 			</h2>
 		</a></li>
 		<li class="has-submenu"><a href="#">Account</a>
@@ -37,13 +29,11 @@
         <% end %>
 			</ul>
 		</li>
-		<li><a href="/posts">Blog</a></li>
-		<li><a href="/pages/filter/contact">Contact</a></li>
 	</ul>
+<h1><span class="light">The Great Love of God</span></h1>
 </nav>
-</div>
-<h1 class="deepshadow">The Great love of god evangelical ministry</h1>
 
+</div>
 <% if current_page?(root_path) %>
   <nav style="  width: 100%;
     min-height: 50%;
@@ -98,3 +88,157 @@
     </div>
   </nav>
 <% end %>
+
+
+<!DOCTYPE html><html class="menu">
+<html>
+
+<head>
+
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content=="IE=edge"/>
+<meta name="google" value="notranslate"/>
+<title>Side Menu</title>
+
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+</head>
+<body>
+
+</div><nav class="main-menu">
+ <div>
+    <a class="logo" href="http://startific.com">
+    </a>
+  </div>
+<div class="settings"></div>
+<div class="scrollbar" id="style-1">
+
+<ul>
+
+<li>
+<a href="/">
+<i class="fa fa-home fa-lg"></i>
+<span class="nav-text">Home</span>
+</a>
+</li>
+
+<li>
+  <% unless current_user && user_signed_in? %>
+<a href="/sign_up">
+<i class="fa fa-registered fa-lg"></i>
+<span class="nav-text">Sign Up</span>
+</a>
+<% end %>
+
+</li>
+<li>
+  <% unless current_user && user_signed_in? %>
+<a href="/login">
+<i class="fa fa-user fa-lg"></i>
+<span class="nav-text">Login</span>
+</a>
+<% end %>
+
+</li>
+
+
+<li>
+<a href="/pages/filter/contact">
+<i class="fa fa-envelope-o fa-lg"></i>
+<span class="nav-text">Contact</span>
+</a>
+</li>
+
+
+<li>
+<a href="http://startific.com">
+<i class="fa fa-heart-o fa-lg"></i>
+
+<span class="share">
+
+
+<div class="addthis_default_style addthis_32x32_style">
+
+<div style="position:absolute;
+margin-left: 56px;top:3px;">
+
+ <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" class="share-popup"><img src="http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png" width="30px" height="30px"></a>
+
+   <a href="https://twitter.com/share" target="_blank" class="share-popup"><img src="https://cdn1.iconfinder.com/data/icons/metro-ui-dock-icon-set--icons-by-dakirby/512/Twitter_alt.png" width="30px" height="30px"></a>
+
+<a href="https://plusone.google.com/_/+1/confirm?hl=en&url=_URL_&title=_TITLE_
+" target="_blank" class="share-popup"><img src="http://icons.iconarchive.com/icons/danleech/simple/512/google-plus-icon.png" width="30px" height="30px"></a>
+
+
+
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ff17589278d8b3a"></script>
+
+
+
+                        </span>
+                        <span class="twitter"></span>
+                        <span class="google"></span>
+                        <span class="fb-like">
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fstartific&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe>
+
+                        </span>
+                        <span class="nav-text">
+                        </span>
+
+                    </a>
+
+</li>
+
+
+
+
+</li>
+<li class="darkerlishadow">
+<a href="/news">
+<i class="fa fa-clock-o fa-lg"></i>
+<span class="nav-text">Testimonies</span>
+</a>
+</li>
+
+<li class="darkerli">
+<a href="http://startific.com">
+<i class="fa fa-comment-o fa-lg"></i>
+<span class="nav-text">Blog</span>
+</a>
+</li>
+
+<li class="darkerli">
+<a href="/images">
+<i class="fa fa-picture-o fa-lg"></i>
+<span class="nav-text">Gallery</span>
+</a>
+</li>
+
+<li class="darkerli">
+<a href="/pages/filter/aboutgo">
+<i class="fa fa-male"></i>
+ <span class="nav-text">Founder</span>
+</a>
+</li>
+
+<li class="darkerli">
+<a href="/pages/filter/greatloveofgod">
+<i class="fa fa-user-plus fa-lg"></i>
+<span class="nav-text">About G . L . G</span>
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+
+
+
+
+</body>
+</html>

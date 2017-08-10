@@ -247,7 +247,7 @@ ul{margin: 0 !important;}
 						padding: 8px; text-transform: uppercase;font-family: 'fjalla_oneregular';}
 	.btn:hover{background: #f9b701; color: #2d6e84; transition:all 1s;}
 
-	.featured-blocks{padding: 60px 0; background: #FF1493; text-align: center;}
+	.featured-blocks{padding: 60px 0; background: none; text-align: center;}
 	.featured-blocks .block{background: #bcbcbc; border-radius: 5px; padding-left: 20px; padding-right:20px; padding-top: 0;}
 	.featured-blocks .block [class^="fw-icon-"]{}
 	.featured-blocks .block h1{padding-top: 10px; font-size: 24px; color: #2d6e84; font-family: 'fjalla_oneregular'; text-transform: uppercase; padding-bottom: 10px;}
