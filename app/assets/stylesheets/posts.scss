@@ -26,6 +26,8 @@ hr.devidepost
 
 
 div.posttitle {
+  position: relative;
+  padding-top: 30px;
   color:blue;
   font-size:20px;
   font-weight:bold
@@ -37,6 +39,9 @@ div.post_body_index {
   margin: 0 auto;
   padding-left:15px;
   margin-right:15px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color:black;
 }
 
 div.post-show-body {
