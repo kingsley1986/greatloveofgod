@@ -1,8 +1,8 @@
-<div class="container container-table" style=" text-align: center; margin: 0 auto; background: rgba(54, 25, 25, .5);   margin:auto;width:30%;text-align:center;" >
+<div class="container container-table for-events" style=" text-align: center; margin: 0 auto; background: rgba(54, 25, 25, .5); width:30%;text-align:center;" >
   <didv class="content" >
     <% @upcomings.each do |upcoming_event| %>
     <hr class="devidepost">
-        <div class="upcoming_title" style="background-color:white; font-weight:bold">
+        <div class="upcoming_title" style="background-color:white; font-weight:bold; color:red">
           <%= upcoming_event.title %>
         </div>
       </br>
@@ -40,7 +40,7 @@
         <div class="btn btn-primary btn-sm" id="hiderthisclass" style="display:none"><%= link_to "I am coming with someone",  coming_with_person_upcoming_event_path(upcoming_event), :method=> :put, style:"font-weight:bold; color:white; font-size:20px; text-decoration:none" %></div>
       </br>
       <% he = (upcoming_event.going + upcoming_event.coming_with).count %>
-        <div class="countperson" style="background:white; font-size:18px; font-weight:bold;margin-bottom:40px;"><%= pluralize(he, "Person")%> going</div>
+        <div class="countperson" style="background:white; font-size:18px; font-weight:bold;margin-bottom:40px; color:black"><%= pluralize(he, "Person")%> going</div>
     <% end %>
   </div>
 </div>

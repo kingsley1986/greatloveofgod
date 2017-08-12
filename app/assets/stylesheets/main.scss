@@ -221,7 +221,7 @@ h1 span.light{
     text-align:center;
     font-family: 'Montserrat', sans-serif;
     text-transform:uppercase;
-    font-size: 60px;
+    font-size: 40px;
     cursor:pointer;
     user-select: none;
 }
@@ -243,13 +243,20 @@ h1:active span.light{
 }
 
  @media only screen and (max-width: 500px) {
+   div.container.container-table.for-events {
+     position: relative;
+     left:17%;
+   }
+
+ }
+ @media only screen and (max-width: 500px) {
    h1 span.light {
      width: 800px;
      height: 200px;
      line-height: 200px;
      position: relative;
-     top: 50%;
-     left: 50%;
+     bottom: 71px;
+     left: 42%;
      margin: -100px 0 0 -300px;
      text-align:center;
      font-family: 'Montserrat', sans-serif;
@@ -259,6 +266,7 @@ h1:active span.light{
    }
 
  }
+
  @media only screen and (max-width: 1140px) {
    li.has-submenu{
   font-size: 30px;
@@ -271,10 +279,52 @@ h1:active span.light{
     font-size: 23px;
 }
 }
- @media screen and (max-width: 1140px){
- div.button.middle  {
-    margin-top: 70px;
+
+ @media screen and (max-width: 500px){
+ nav.events-link  {
+    position: relative;
+    top:-120px;
+    left:20px;
 }
+}
+
+h2.list-of-ministries {
+  padding: 10px;
+}
+h2.list-of-service {
+  padding: 10px;
+}
+
+@media screen and (max-width: 500px){
+  h2.list-of-ministries  {
+    font-size: 20px;
+
+  }
+}
+@media screen and (max-width: 500px){
+  h2.list-of-service {
+    font-size: 20px;
+
+  }
+}
+@media screen and (max-width: 500px){
+  h1.we-are-family  {
+    font-size: 20px;
+
+  }
+}
+  
+
+.we-are-family {
+  background:#001f3f;
+  font-size:28px;
+  color:white;
+  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  margin:0 auto;
+  width:97.3%;
+  margin:0 auto;
+  border-style: solid;
+  border-color: #FF00FF;
 }
 
 

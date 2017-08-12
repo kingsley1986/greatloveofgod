@@ -1,9 +1,9 @@
-<div class="container container-table" style=" text-align: center; margin: 0 auto; background: rgba(54, 25, 25, .5);   margin:auto;width:30%;text-align:center;" >
+<div class="container container-table for-events" style=" text-align: center; margin: 0 auto; background: rgba(54, 25, 25, .5);   margin:auto;width:30%;text-align:center;" >
   <didv class="content" >
     <% if @lives&.any? %>
       <% @lives.each do |live| %>
       <hr class="devidepost">
-          <div class="upcoming_title" style="background-color:white; font-weight:bold">
+          <div class="upcoming_title" style="background-color:white; font-weight:bold; color:red">
             <%= live.title %>
           </div>
           <div class="upcomings_body">
@@ -21,7 +21,7 @@
           </div>
       <% end %>
     <% else %>
-      <h3 style="background:white">No Live Event Now, Please Check out upcoming events </h3>
+      <h3 style="background:white; color:black">No Live Event Now, Please Check out upcoming events </h3>
     <% end %>
   </div>
 </div>
