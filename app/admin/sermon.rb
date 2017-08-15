@@ -6,7 +6,7 @@ ActiveAdmin.register Sermon do
        f.input :title
        f.input :body, as: :text
        f.input :preacher
-       f.input :sermondate, as: :date_picker
+       f.input :sermondate, as: :datepicker
        f.has_many :pictures do |ff|
          ff.input :image, multiple: true, name: "pictures[image][]", :as => :file, :hint => ff.template.image_tag(ff.object.image.url(:medium))
        end
