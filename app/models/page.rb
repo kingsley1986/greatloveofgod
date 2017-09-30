@@ -14,7 +14,7 @@ class Page < ActiveRecord::Base
                  'Thursday',
                  'Home Page',
                  'Contact',
-                 'About_Greatlove',
+                 'Greatloveofgod',
                  'aboutgo',
                  'About',
                  'Fridaynightvigil',
@@ -33,7 +33,7 @@ scope :thursday, -> { where(page_type:  'Thursday')  }
 scope :home, -> { where(page_type:  'Home Page')  }
 scope :contact, -> { where(page_type: 'Contact') }
 scope :about, -> { where(page_type: 'About') }
-scope :greatloveofgod, -> { where(page_type: 'greatloveofgod') }
+scope :greatloveofgod, -> { where(page_type: 'Greatloveofgod') }
 scope :fridaynightvigil, -> { where(page_type: 'Fridaynightvigil') }
 scope :aboutgo, -> { where(page_type: 'aboutgo') }
 
