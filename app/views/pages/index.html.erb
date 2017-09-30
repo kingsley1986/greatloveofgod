@@ -1,11 +1,11 @@
 <div class="heading_for_blog">
-  <div class="container"  style="width:30%;">
+  <div class="container"  style="width:50%;">
     <% @pages.each do |page| %>
       <div class="row item" >
         <div class="col-md-8"  style="background-color:white; margin-bottom:20px;">
           <p ><div class="post_body_index" style="text-align: center;  text-align: justify; margin: 0 auto; padding-left:15px; margin-right:15px;"><%= page.body %></div></p>
           <% page.pictures.each do |pic| %>
-              <div class="postimageclass" style="padding-top:40px;"><%= image_tag(pic.image.url(:medium)) %></div>
+              <div class="postimageclass" style="padding-top:40px;"><%= image_tag(pic.image.url(:large)) %></div>
           <% end %>
         </div>
       </div>
